@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-dark-200: #475467;
+  --color-light-blue-100: #c1d3f81a;
+  --color-light-blue-200: #a7bff14d;
+
+  --color-badge-green: #d5faf1;
+  --color-badge-red: #f9e3e2;
+  --color-badge-yellow: #fceed8;
+
+  --color-badge-green-text: #254d4a;
+  --color-badge-red-text: #752522;
+  --color-badge-yellow-text: #73321b;
+}
+
+html,
+body {
+  @apply bg-white;
+}
+
+main {
+  @apply min-h-screen pt-10;
+}
+
+h1 {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gradient leading-tight tracking-[-2px] font-semibold;
+}
+
+h2 {
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-dark-200;
+}
+
+label {
+  @apply text-dark-200;
+}
+
+input {
+  @apply w-full p-3 sm:p-4 text-sm sm:text-base inset-shadow rounded-2xl focus:outline-none bg-white focus:ring-2 focus:ring-indigo-500;
+}
+
+textarea {
+  @apply w-full p-3 sm:p-4 text-sm sm:text-base inset-shadow rounded-2xl focus:outline-none bg-white resize focus:ring-2 focus:ring-indigo-500;
+}
+
+form {
+  @apply flex flex-col items-start gap-8 w-full;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
+}
+
+.gradient-border {
+  @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 rounded-2xl;
+}
+
+.primary-button {
+  @apply primary-gradient text-white rounded-full px-3 sm:px-4 py-2 cursor-pointer w-full sm:w-auto text-sm sm:text-base transition-all hover:opacity-90;
+}
+
+.resume-nav {
+  @apply flex flex-row justify-between items-center p-3 sm:p-4 px-4 sm:px-6 border-b border-gray-200 gap-2;
+}
+
+.resume-summary {
+  @apply flex flex-row items-center justify-center p-4 gap-4;
+}
+
+.resume-summary .category {
+  @apply flex flex-row gap-2 items-center bg-gray-50 rounded-2xl p-4 w-full justify-between;
+}
+
+.back-button {
+  @apply flex flex-row items-center gap-2 border border-gray-200 rounded-lg p-2 shadow-sm;
+}
+
+.auth-button {
+  @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
+}
+
+.main-section {
+  @apply flex flex-col items-center gap-4 sm:gap-8 pt-6 sm:pt-12 px-4 sm:px-6 mx-auto pb-5 w-full;
+}
+
+.page-heading {
+  @apply flex flex-col items-center gap-4 sm:gap-8 max-w-4xl text-center px-2;
+}
+
+.resumes-section {
+  @apply flex flex-col sm:flex-wrap sm:flex-row gap-4 sm:gap-6 items-center sm:items-start w-full justify-center sm:justify-evenly px-4;
+}
+
+.resume-card {
+  @apply flex flex-col gap-4 sm:gap-8 h-auto sm:h-[560px] w-full sm:w-[280px] md:w-[350px] lg:w-[450px] xl:w-[490px] bg-white rounded-2xl p-3 sm:p-4 shadow-md;
+}
+
+.resume-card-header {
+  @apply flex flex-col sm:flex-row gap-2 justify-between items-start sm:items-center min-h-0 sm:min-h-[110px];
+}
+
+.feedback-section {
+  @apply flex flex-col gap-4 sm:gap-8 w-full sm:w-1/2 px-3 sm:px-8 py-3 sm:py-6;
+}
+
+.navbar {
+  @apply flex flex-row justify-between items-center bg-white rounded-full p-3 sm:p-4 w-[calc(100%-24px)] sm:w-full mx-3 sm:mx-auto px-4 sm:px-10 max-w-[1200px] gap-2;
+}
+
+.score-badge {
+  @apply flex flex-row items-center justify-center py-1 px-2 gap-2 sm:gap-4 rounded-[96px] text-xs sm:text-sm;
+}
+
+.form-div {
+  @apply flex flex-col gap-2 w-full items-start;
+}
+
+.form-div label {
+  @apply text-sm sm:text-base font-medium;
+}
+
+.uplader-drag-area {
+  @apply relative p-4 sm:p-8 text-center transition-all duration-700 cursor-pointer bg-white rounded-2xl min-h-[150px] sm:min-h-[208px];
+}
+
+.uploader-selected-file {
+  @apply flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 p-3 bg-gray-50 rounded-2xl;
+}
+
+.bg-gradient {
+  background: linear-gradient(to bottom, #f0f4ff 60%, #fa7185cc);
+}
+
+.gradient-hover {
+  @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200;
+}
+
+.primary-gradient {
+  background: linear-gradient(to bottom, #8e98ff, #606beb);
+  box-shadow: 0px 74px 21px 0px #6678ef00;
+}
+
+.primary-gradient-hover {
+  background: linear-gradient(to bottom, #717dff, #4957eb);
+}
+
+.inset-shadow {
+  box-shadow: inset 0 0 12px 0 rgba(36, 99, 235, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
